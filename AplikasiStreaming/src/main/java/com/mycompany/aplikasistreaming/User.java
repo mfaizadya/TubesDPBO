@@ -70,7 +70,6 @@ public abstract class User implements InterfaceUser {
         this.email = email;
     }
 
-    // Implement login and logout from interface
     @Override
     public void login(String inputUsername, String inputPassword) {
         if (this.username.equals(inputUsername) && this.password.equals(inputPassword)) {
@@ -85,7 +84,6 @@ public abstract class User implements InterfaceUser {
         System.out.println(username + " has logged out.");
     }
 
-    // Abstract method for browsing catalog
     @Override
     public abstract void browseCatalog(ArrayList<String> catalog);
 

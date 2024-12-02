@@ -33,7 +33,7 @@ public class SubscribedUser extends User {
     public void accessSubscribedContent(ArrayList<String> subscribedContent) {
         System.out.println(getUsername() + " sedang mengakses konten berlangganan berikut: ");
         if (subscribedContent.isEmpty()) {
-            System.out.println("Tidak ada content premium yang tersedia");
+            System.out.println("Tidak ada content premium yang tersedia.");
         }else {
             for (String content : subscribedContent) {
                 System.out.println("- " + content);
@@ -45,7 +45,7 @@ public class SubscribedUser extends User {
     public void browseCatalog(ArrayList<String> catalog) {
         System.out.println(getUsername() + " sedang mencari katalog di fitur berlangganan berikut: ");
         for (String content : catalog) {
-            System.out.println(content);
+            System.out.println("- " + content);
         }
         System.out.println("Benefits yang tersedia: " + subscribedBenefits);
     }

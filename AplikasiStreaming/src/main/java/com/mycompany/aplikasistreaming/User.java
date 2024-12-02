@@ -73,15 +73,15 @@ public abstract class User implements InterfaceUser {
     @Override
     public void login(String inputUsername, String inputPassword) {
         if (this.username.equals(inputUsername) && this.password.equals(inputPassword)) {
-            System.out.println(username + " has successfully logged in.");
+            System.out.println(username + " telah berhasil login.");
         } else {
-            System.out.println("Invalid credentials for username: " + inputUsername);
+            System.out.println("Username atau password anda salah, coba ulangi");
         }
     }
 
     @Override
     public void logout() {
-        System.out.println(username + " has logged out.");
+        System.out.println(username + " telah berhasil logout.");
     }
 
     @Override

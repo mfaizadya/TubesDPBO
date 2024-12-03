@@ -14,7 +14,7 @@ public class AplikasiStreaming {
     public static void main(String[] args) {
         
         // main Recommendation
-        List<String> allFilms = Arrays.asList("Bullet Train", "Rush Hour", "Scream", "Friday The 13th");// daftar film
+        List<String> recFilms = Arrays.asList("Bullet Train", "Rush Hour", "Scream", "Friday The 13th");// daftar film
 
         // pemetaan genre ke film
         Map<String, List<String>> genreToFilms = new HashMap<>();
@@ -23,7 +23,7 @@ public class AplikasiStreaming {
         genreToFilms.put("Comedy", Arrays.asList("Bullet Train", "Rush Hour"));
 
         // membuat objek GenreRecommendation
-        GenreRecommendation recommendation = new GenreRecommendation(allFilms, genreToFilms);
+        GenreRecommendation recommendation = new GenreRecommendation(recFilms, genreToFilms);
 
         // menampilkan semua film
         recommendation.showAllRecommendedFilms();

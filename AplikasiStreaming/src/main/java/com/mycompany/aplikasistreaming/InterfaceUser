@@ -9,7 +9,5 @@ import java.util.ArrayList;
  * @author Faiz
  */
 public interface InterfaceUser {
-    public void login(String username, String password);
-    public void logout();
-    public void browseCatalog(ArrayList<String> catalog);
+    boolean login(String identifier, String password);
 }

@@ -63,25 +63,40 @@ public class AplikasiStreaming {
         }
 
         // main Recommendation
-        List<String> recFilms = Arrays.asList("Bullet Train", "Rush Hour", "Scream", "Friday The 13th");// daftar film
+        // Daftar film
+        ArrayList<String> recFilms = new ArrayList<>();
+        recFilms.add("Bullet Train");
+        recFilms.add("Rush Hour");
+        recFilms.add("Scream");
+        recFilms.add("Friday The 13th");
 
-        // pemetaan genre ke film
-        Map<String, List<String>> genreToFilms = new HashMap<>();
-        genreToFilms.put("Action", Arrays.asList("Bullet Train", "Rush Hour"));
-        genreToFilms.put("Horror", Arrays.asList("Scream", "Friday The 13th"));
-        genreToFilms.put("Comedy", Arrays.asList("Bullet Train", "Rush Hour"));
+        // Pemetaan genre ke film
+        ArrayList<String> actionFilms = new ArrayList<>();
+        actionFilms.add("Bullet Train");
+        actionFilms.add("Rush Hour");
+        ArrayList<String> horrorFilms = new ArrayList<>();
+        horrorFilms.add("Scream");
+        horrorFilms.add("Friday The 13th");
+        ArrayList<String> comedyFilms = new ArrayList<>();
+        comedyFilms.add("Bullet Train");
+        comedyFilms.add("Rush Hour");
+        
+        HashMap<String, ArrayList<String>> genreToFilms = new HashMap<>();
+        genreToFilms.put("Action", actionFilms);
+        genreToFilms.put("Horror", horrorFilms);
+        genreToFilms.put("Comedy", comedyFilms);
 
-        // membuat objek GenreRecommendation
+        // Membuat objek GenreRecommendation
         GenreRecommendation recommendation = new GenreRecommendation(recFilms, genreToFilms);
 
-        // menampilkan semua film
+        // Menampilkan semua film
         recommendation.showAllRecommendedFilms();
 
-        // menampilkan rekomendasi berdasarkan genre
+        // Menampilkan rekomendasi berdasarkan genre
         recommendation.showRecommendations("Action");
         recommendation.showRecommendations("Horror");
         recommendation.showRecommendations("Comedy");
-        recommendation.showRecommendations("Drama");
+        recommendation.showRecommendations("Drama"); // Contoh untuk test case genre yang tidak ada
         
         // main CastToDevice
         CastToDevice castToDevice = new CastToDevice("TV");

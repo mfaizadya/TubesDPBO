@@ -99,14 +99,43 @@ public class AplikasiStreaming {
         recommendation.showRecommendations("Drama"); // Contoh untuk test case genre yang tidak ada
         
         // main CastToDevice
-        CastToDevice castToDevice = new CastToDevice("TV");
+        System.out.print("Masukkan nama perangkat untuk casting: ");
+        String deviceName = scanner.nextLine();
+        CastToDevice castToDevice = new CastToDevice(deviceName);
 
-        castToDevice.checkCastingStatus(); // cek status awal
+        /*castToDevice.checkCastingStatus(); // cek status awal
         castToDevice.startCasting();       // memulai casting
         castToDevice.checkCastingStatus(); // cek status saat casting
         castToDevice.startCasting();       // coba mulai casting lagi
         castToDevice.stopCasting();        // hentikan casting
-        castToDevice.checkCastingStatus(); // cek status setelah berhenti
+        castToDevice.checkCastingStatus(); // cek status setelah berhenti*/
         
+        //gambaran menu CastToDevice
+        while (true) {
+            System.out.println("\ngambaran menu CastToDevice");
+            System.out.println("1. Mulai Casting");
+            System.out.println("2. Hentikan Casting");
+            System.out.println("3. Cek Status Casting");
+            System.out.println("4. Keluar");
+            System.out.print("Pilih opsi: ");
+            String choiceCTD = scanner.nextLine();
+            switch (choiceCTD) {
+                case "1":
+                    castToDevice.startCasting();
+                    break;
+                case "2":
+                    castToDevice.stopCasting();
+                    break;
+                case "3":
+                    castToDevice.checkCastingStatus();
+                    break;
+                case "4":
+                    System.out.println("Keluar dari program.");
+                    break;
+                default:
+                    System.out.println("[Error] Pilihan tidak valid. Silakan input kembali lagi.");
+                    break;
+            }
+        }
     }
 }

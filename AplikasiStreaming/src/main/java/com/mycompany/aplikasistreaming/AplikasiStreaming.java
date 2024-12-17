@@ -15,6 +15,7 @@ public class AplikasiStreaming {
         Scanner scanner = new Scanner(System.in);
         UserManager userManager = new UserManager();
 
+        //menu login & register
         while (true) {
             System.out.println("===== APLIKASI STREAMING FILM =====");
             System.out.println("Selamat Datang!");

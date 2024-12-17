@@ -21,7 +21,7 @@ public class AplikasiStreaming {
             System.out.println("Pilih menu berikut:");
             System.out.println("1. Sign Up");
             System.out.println("2. Sign In");
-            System.out.println("3. Exit");
+            System.out.println("0. Exit");
             System.out.println("===================================");
             System.out.print("Pilihan: ");
 
@@ -51,7 +51,7 @@ public class AplikasiStreaming {
                     userManager.loginUser(identifier, password);
                     break;
 
-                case "3":
+                case "0":
                     System.out.println("@ Terima kasih telah menggunakan aplikasi!");
                     scanner.close();
                     return;

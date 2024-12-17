@@ -7,17 +7,17 @@ package com.mycompany.aplikasistreaming;
 import java.util.*;
 
 public abstract class Recommendation {
-    private List<String> films; // Menyimpan daftar film
+    private ArrayList<String> films; // Menyimpan daftar film
 
-    public Recommendation(List<String> films) {
+    public Recommendation(ArrayList<String> films) {
         this.films = films;
     }
 
-    public List<String> getFilms() {
+    public ArrayList<String> getFilms() {
         return films;
     }
 
-    public void setFilms(List<String> films) {
+    public void setFilms(ArrayList<String> films) {
         this.films = films;
     }
 

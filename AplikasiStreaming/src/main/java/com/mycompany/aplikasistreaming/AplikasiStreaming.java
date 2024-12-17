@@ -14,6 +14,7 @@ public class AplikasiStreaming {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         UserManager userManager = new UserManager();
+        SubscriptionTest subscriptionTest = new SubscriptionTest();
 
         //menu login & register
         while (true) {
@@ -50,6 +51,8 @@ public class AplikasiStreaming {
                     String password = scanner.nextLine();
 
                     userManager.loginUser(identifier, password);
+                    subscriptionTest.showMenuSubscription();
+                    subscriptionTest.showSubscriptionOptions();
                     break;
 
                 case "0":

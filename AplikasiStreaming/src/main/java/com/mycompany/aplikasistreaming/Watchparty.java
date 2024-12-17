@@ -57,7 +57,10 @@ public class WatchParty {
         System.out.println("watch party dibuat dengan ID: " + partyID);
     }
 
-    public void joinParty(String user) {
+    public void joinParty(String user) throws Exception {
+        if (participants >= 50) {
+            throw new Exception("Party sudah penuh. Tidak dapat menambah lebih dari 50 peserta.");
+        }
         participants++;
         System.out.println(user + " mengikuti party, total peserta: " + participants);
     }

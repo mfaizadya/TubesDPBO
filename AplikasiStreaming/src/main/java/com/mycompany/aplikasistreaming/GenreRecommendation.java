@@ -8,18 +8,18 @@ import java.util.*;
 
 public class GenreRecommendation extends Recommendation {
 
-    private Map<String, List<String>> genreToFilms; // Pemetaan genre ke daftar film
+    private HashMap<String, ArrayList<String>> genreToFilms; // Pemetaan genre ke daftar film
 
-    public GenreRecommendation(List<String> films, Map<String, List<String>> genreToFilms) {
+    public GenreRecommendation(ArrayList<String> films, HashMap<String, ArrayList<String>> genreToFilms) {
         super(films);
         this.genreToFilms = genreToFilms;
     }
 
-    public Map<String, List<String>> getGenreToFilms() {
+    public HashMap<String, ArrayList<String>> getGenreToFilms() {
         return genreToFilms;
     }
 
-    public void setGenreToFilms(Map<String, List<String>> genreToFilms) {
+    public void setGenreToFilms(HashMap<String, ArrayList<String>> genreToFilms) {
         this.genreToFilms = genreToFilms;
     }
 

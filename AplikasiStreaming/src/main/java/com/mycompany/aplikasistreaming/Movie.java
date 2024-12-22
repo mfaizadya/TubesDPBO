@@ -16,15 +16,31 @@ public class Movie extends Film {
         this.isBoxOffice = isBoxOffice;
     }
 
-    // Overridden method
     @Override
     public void watch() {
-        System.out.println("Menonton Film: " + getTitle());
+        try {
+            if (getTitle() == null || getTitle().isEmpty()) {
+                throw new IllegalArgumentException("Film tidak ditemukan!");
+            }
+            System.out.println("Menonton Film: " + getTitle());
+        } catch (IllegalArgumentException e) {
+            System.out.println("Exception: " + e.getMessage());
+        } finally {
+            System.out.println("Selesai mencoba untuk menonton film.");
+        }
     }
 
-    // Overloaded method
     public void watch(String title, boolean isHD, String language) {
-        String quality = isHD ? "in HD" : "in SD";
-        System.out.println("Menonton Film " + title + " " + quality + " dengan audio dalam bahasa " + language);
+        try {
+            if (title == null || title.isEmpty()) {
+                throw new IllegalArgumentException("Film tidak ditemukan!");
+            }
+            String quality = isHD ? "in HD" : "in SD";
+            System.out.println("Menonton Film " + title + " " + quality + " dengan audio dalam bahasa " + language);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Exception: " + e.getMessage());
+        } finally {
+            System.out.println("Selesai mencoba untuk menonton film.");
+        }
     }
 }

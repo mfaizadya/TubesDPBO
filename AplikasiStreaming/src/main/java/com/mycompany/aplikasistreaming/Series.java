@@ -18,14 +18,31 @@ public class Series extends Film {
         this.episodes = episodes;
     }
 
-    // Overridden method
     @Override
     public void watch() {
-        System.out.println("Menonton Series: " + getTitle());
+        try {
+            if (getTitle() == null || getTitle().isEmpty()) {
+                throw new IllegalArgumentException("Film tidak ditemukan!");
+            }
+            System.out.println("Menonton Series: " + getTitle());
+        } catch (IllegalArgumentException e) {
+            System.out.println("Exception: " + e.getMessage());
+        } finally {
+            System.out.println("Selesai mencoba untuk menonton series.");
+        }
     }
 
-    // Overloaded method
     public void watch(String title, int season, int episode) {
-        System.out.println("Menonton Series " + title + " Season " + season + ", Episode " + episode);
+        try {
+            if (title == null || title.isEmpty()) {
+                throw new IllegalArgumentException("Series tidak ditemukan!");
+            }
+            System.out.println("Menonton Series " + title + " Season " + season + ", Episode " + episode);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Exception: " + e.getMessage());
+        } finally {
+            System.out.println("Selesai mencoba untuk menonton series.");
+        }
     }
 }
+

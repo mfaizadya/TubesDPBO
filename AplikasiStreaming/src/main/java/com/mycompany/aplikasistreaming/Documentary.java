@@ -18,14 +18,30 @@ public class Documentary extends Film {
         this.narrator = narrator;
     }
 
-    // Overridden method
     @Override
     public void watch() {
-        System.out.println("Menonton Documentary: " + getTitle());
+        try {
+            if (getTitle() == null || getTitle().isEmpty()) {
+                throw new IllegalArgumentException("Film tidak ditemukan!");
+            }
+            System.out.println("Menonton Documentary: " + getTitle());
+        } catch (IllegalArgumentException e) {
+            System.out.println("Exception: " + e.getMessage());
+        } finally {
+            System.out.println("Selesai mencoba untuk menonton documentary.");
+        }
     }
 
-    // Overloaded method
     public void watch(String title, String subject) {
-        System.out.println("Menonton Documentary " + title + " tentang " + subject + " dengan narator " + narrator);
+        try {
+            if (title == null || title.isEmpty() || subject == null || subject.isEmpty()) {
+                throw new IllegalArgumentException("Film atau subjek tidak valid!");
+            }
+            System.out.println("Menonton Documentary " + title + " tentang " + subject + " dengan narator " + narrator);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Exception: " + e.getMessage());
+        } finally {
+            System.out.println("Selesai mencoba untuk menonton documentary.");
+        }
     }
 }

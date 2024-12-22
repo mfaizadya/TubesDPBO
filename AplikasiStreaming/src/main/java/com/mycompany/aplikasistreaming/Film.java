@@ -19,7 +19,7 @@ public abstract class Film {
 
     public Film(String filmID, String title, String genre, int releaseYear, int duration, double rating, String posterURL) {
         this.filmID = filmID;
-        this.title = title; // Perbaikan penamaan
+        this.title = title;
         this.genre = genre;
         this.releaseYear = releaseYear;
         this.duration = duration;
@@ -34,7 +34,6 @@ public abstract class Film {
         return "Film tidak ditemukan";
     }
 
-    // Abstract method
     public abstract void watch();
 
     public String getTitle() {

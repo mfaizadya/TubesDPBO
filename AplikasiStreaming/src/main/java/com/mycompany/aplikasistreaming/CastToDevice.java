@@ -44,6 +44,34 @@ public class CastToDevice {
             System.out.println("Tidak ada proses casting yang berjalan.");
         }
     }
-    
+    /*
+        
+        //gambaran menu CastToDevice
+        while (true) {
+            System.out.println("\ngambaran menu CastToDevice");
+            System.out.println("1. Mulai Casting");
+            System.out.println("2. Hentikan Casting");
+            System.out.println("3. Cek Status Casting");
+            System.out.println("4. Lanjut");
+            System.out.print("Pilih opsi: ");
+            String choiceCTD = scanner.nextLine();
+            switch (choiceCTD) {
+                case "1":
+                    castToDevice.startCasting();
+                    break;
+                case "2":
+                    castToDevice.stopCasting();
+                    break;
+                case "3":
+                    castToDevice.checkCastingStatus();
+                    break;
+                case "4":
+                    System.out.println("Next");
+                    break;
+                default:
+                    System.out.println("[Error] Pilihan tidak valid. Silakan input kembali lagi.");
+                    break;
+            }
+        }*/
     
 }

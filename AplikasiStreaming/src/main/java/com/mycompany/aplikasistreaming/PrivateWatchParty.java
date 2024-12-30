@@ -30,7 +30,7 @@ public class PrivateWatchParty extends WatchParty {
             throw new Exception("jumlah pengguna yang diundang tidak valid.");
         }
         invitedUsers += users;
-        System.out.println(users + " pengguna sudah diundang, total pengguna: " + invitedUsers);
+        System.out.println(users + " pengguna sudah diundang, total pengguna yang diundang: " + invitedUsers);
     }
 
     public void lockParty() {
